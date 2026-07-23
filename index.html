@@ -1,1 +1,97 @@
-<!doctype html><html><head><meta charset='utf-8'><title>Driver to Driver Referral</title><link rel='stylesheet' href='style.css'></head><body><h1>Driver to Driver Referral</h1><p>This is the production-build starter based on the approved layout. Replace hero-truck.jpg with your approved image.</p><script src='script.js'></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#c90018">
+  <meta name="description" content="A driver-to-driver conversation about a better CDL driving opportunity.">
+  <title>Driver to Driver Referral</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header" id="home">
+  <div class="shell header-inner">
+    <a class="brand" href="#home" aria-label="Driver to Driver Referral home">
+      <span class="brand-mark" aria-hidden="true">🤝</span>
+      <span class="brand-copy"><strong>Driver to Driver</strong><span>Referral</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><b class="sr-only">Toggle navigation</b></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+      <a href="#home">Home</a><a href="#opportunity">About This Opportunity</a><a href="#expect">What to Expect</a><a class="nav-cta" href="#talk">Let's Talk</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+  <img class="hero-image" src="assets/hero-truck.png" alt="Bright red tractor-trailer beside a warehouse under a blue sky">
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="shell hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow script">From one driver to another...</p>
+      <h1 id="hero-title"><span>A Better</span><span>Driving Job</span><em>May Be Closer</em><em>Than You Think.</em></h1>
+      <div class="hero-rule" aria-hidden="true"></div>
+      <p class="hero-intro">I've found a company that treats drivers right. If you're looking for a change, I'd be happy to share what I've experienced.</p>
+      <ul class="hero-points"><li>Good miles.</li><li>Reliable equipment.</li><li>Respect.</li><li>Consistent home time.</li><li>Honest communication.</li><li>Drivers helping drivers.</li></ul>
+      <div class="hero-actions"><a class="button" href="#talk">💬 Let's Talk</a><p class="no-pressure script">No pressure.<br>Just a conversation.</p></div>
+    </div>
+  </div>
+</section>
+<section class="benefits" id="opportunity" aria-label="Opportunity benefits">
+  <div class="shell benefits-grid">
+    <article class="benefit"><div class="benefit-icon">👥</div><h2>Treated Like a Person</h2><p>You're more than just a truck number.</p></article>
+    <article class="benefit"><div class="benefit-icon">🛣️</div><h2>Solid Miles</h2><p>Consistent freight and steady work.</p></article>
+    <article class="benefit"><div class="benefit-icon">🕒</div><h2>Home Time</h2><p>Get home regularly. No guessing games.</p></article>
+    <article class="benefit"><div class="benefit-icon">🔧</div><h2>Great Equipment</h2><p>Modern, well-maintained trucks you can count on.</p></article>
+    <article class="benefit"><div class="benefit-icon">🛡️</div><h2>Support That Has Your Back</h2><p>Real people. Real help. When you need it.</p></article>
+    <article class="benefit"><div class="benefit-icon">💲</div><h2>Competitive Pay</h2><p>Earn what you're worth on the road.</p></article>
+  </div>
+</section>
+<section class="conversation" id="expect">
+  <div class="shell conversation-grid">
+    <article class="story-card">
+      <h2>Why I Refer Drivers</h2><div class="red-rule"></div>
+      <p>I've been in your seat, and I know there are a lot of <strong>broken promises</strong> out there.</p>
+      <p>The company is growing, and management has reached out to us drivers to help bring in more experienced drivers who may be looking for a better fit.</p>
+      <p class="driver-line">I'm not a recruiter. I'm just a driver who wants to help other good drivers find a better fit.</p>
+      <h3>When we talk, ask me about:</h3>
+      <ul class="talking-points"><li>Newer, well-maintained equipment</li><li>Well-rounded benefits package</li><li>Company-funded ESOP</li><li>Performance-based scorecard</li><li>Weekly pay guarantee</li></ul>
+      <div class="driver-note"><span>🤝</span><p class="script">Drivers helping drivers.<br><strong>That's how it should be.</strong></p></div>
+    </article>
+    <section class="form-card" id="talk" aria-labelledby="talk-title">
+      <div class="form-heading"><div><h2 id="talk-title">Let's Talk</h2><div class="red-rule"></div></div><p class="script">Tell me a little about yourself<br>and I'll reach out.</p></div>
+      <form id="driver-form" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="first-name">First Name *</label><input id="first-name" name="firstName" autocomplete="given-name" required><small id="first-name-error"></small></div>
+          <div class="field"><label for="last-name">Last Name *</label><input id="last-name" name="lastName" autocomplete="family-name" required><small id="last-name-error"></small></div>
+          <div class="field"><label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(555) 555-5555"><small id="phone-error"></small></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com"><small id="email-error"></small></div>
+          <div class="field"><label for="city">Home City *</label><input id="city" name="city" autocomplete="address-level2" required><small id="city-error"></small></div>
+          <div class="field"><label for="state">Home State *</label><select id="state" name="state" autocomplete="address-level1" required><option value="">Select State</option><option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option></select><small id="state-error"></small></div>
+          <div class="field"><label for="experience">Years CDL Experience</label><select id="experience" name="experience"><option value="">Select</option><option>Less than 1 year</option><option>1–3 years</option><option>3–5 years</option><option>5–10 years</option><option>10+ years</option></select></div>
+          <div class="field"><label for="employer">Current Employer (Optional)</label><input id="employer" name="employer" autocomplete="organization"></div>
+        </div>
+        <fieldset class="endorsements"><legend>Endorsements (Check all that apply)</legend><label><input type="checkbox" name="endorsements" value="Hazmat (H)"> Hazmat (H)</label><label><input type="checkbox" name="endorsements" value="Tanker (N)"> Tanker (N)</label><label><input type="checkbox" name="endorsements" value="Doubles/Triples (T)"> Doubles/Triples (T)</label><label><input type="checkbox" name="endorsements" value="TWIC Card"> TWIC Card</label></fieldset>
+        <div class="field compact-field"><label for="best-time">Best Time to Call</label><select id="best-time" name="bestTime"><option value="">Select</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Anytime</option></select></div>
+        <fieldset class="consent-options"><legend>What would you like me to do next? *</legend>
+          <label class="choice-card"><input type="radio" name="nextStep" value="Share with recruiting" required><span><strong>I'm ready for you to share my information with recruiting.</strong><small>You may pass this form along so the recruiting team can follow up.</small></span></label>
+          <label class="choice-card"><input type="radio" name="nextStep" value="Talk with driver first"><span><strong>I'd like to talk with you first.</strong><small>Please contact me before sharing my information with recruiting.</small></span></label>
+          <small id="next-step-error"></small>
+        </fieldset>
+        <p class="contact-note" id="phone-email-note">Please provide at least one way to reach you: phone or email.</p>
+        <button class="button submit-button" type="submit">✈ Start the Conversation</button>
+        <p class="privacy-note">🔒 Your information is private and will only be used to discuss this opportunity.</p>
+        <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </div>
+</section>
+<section class="refer-strip" aria-labelledby="refer-title"><div class="shell refer-inner"><div class="refer-icon">👥</div><div><h2 id="refer-title">Know a Driver?</h2><p>Know a driver who might be a great fit here? Feel free to pass this page along.</p><strong>Good drivers know other good drivers.</strong></div></div></section>
+</main>
+<footer class="site-footer"><div class="shell"><p>© <span id="copyright-year">2026</span> Driver to Driver Referral</p><p>This site is owned and operated by a CDL driver, not a corporate recruiting site.</p></div></footer>
+</body>
+</html>
