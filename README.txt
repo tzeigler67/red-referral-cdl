@@ -1,0 +1,1 @@
+This starter package reflects the agreed structure. Replace hero-truck.jpg with your approved image and continue styling.
