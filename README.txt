@@ -1,4 +1,4 @@
-DRIVER TO DRIVER REFERRAL — PRODUCTION BUILD 2
+DRIVER TO DRIVER REFERRAL — PRODUCTION BUILD 3
 ==============================================
 
 Build 2 is the polished visual and interaction upgrade.
@@ -37,3 +37,11 @@ GITHUB PAGES
 ------------
 Upload the CONTENTS of this folder to the root of the GitHub Pages repository.
 Do not upload the ZIP itself to the repository.
+
+
+BUILD 3 CHANGES
+---------------
+- Updated the Pass It Along supporting text to: “Know a driver who might be looking?”
+- Added “Tiered driver certification program” under “When we talk, ask me about.”
+- Added tablet-specific hero image positioning from 621px through 1100px so the tractor remains visible while the rear of the trailer is cropped.
+- Phone layout at 620px and below remains unchanged.
