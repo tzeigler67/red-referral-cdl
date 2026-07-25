@@ -1,47 +1,31 @@
-DRIVER TO DRIVER REFERRAL — PRODUCTION BUILD 3
-==============================================
+DRIVER TO DRIVER REFERRAL — PRODUCTION BUILD 3.1
+================================================
 
-Build 2 is the polished visual and interaction upgrade.
+Build 3.1 is a corrective and content-update release based directly on Production Build 2.
 
-Included:
-- index.html
-- style.css
-- script.js
-- assets/hero-truck.png
+CHANGES
+-------
+- Tablet-only hero treatment now oversizes and left-anchors the image, physically extending
+  it beyond the right edge. This keeps the tractor visible and crops the rear of the trailer.
+- Phone presentation remains unchanged.
+- Form submission now uses FormSubmit through an AJAX request instead of opening a mail app.
+- Updated the opening Why I Refer Drivers sentence.
+- Updated the company-growth paragraph.
+- Added “Tiered driver certification program.”
+- Swapped “Pass It Along” and “Know a Driver?” in the referral card.
+- Updated referral supporting text to “Know a driver who might be looking?”
 
-Build 2 improvements:
-- Custom SVG icon system replacing emoji
-- Refined hero gradient, texture, type hierarchy, and entrance motion
-- Enhanced navigation and mobile menu animation
-- Benefit-card hover states and equalized layouts
-- Quote treatment for the opening story paragraph
-- Highlighted “broken promises” phrase
-- Modern form controls, radio cards, and validation states
-- Share This Page control with Web Share API and copy fallback
-- Premium callout treatment for Know a Driver?
-- Improved spacing and responsive layouts across phones, tablets, and desktops
-- Reduced-motion support and stronger keyboard focus handling
-
-REQUIRED BEFORE LAUNCH
-----------------------
-Open script.js and replace:
+REQUIRED FORM CONFIGURATION
+---------------------------
+In index.html, replace this placeholder in the form action:
 
 REPLACE-WITH-YOUR-EMAIL@example.com
 
-with the email address that should receive completed inquiries.
-
-The current form uses a mailto workflow, which opens the visitor’s default email app.
-A later build can connect the form to Formspree, Basin, FormSubmit, or another static-site form endpoint.
+with the address that should receive inquiries. The same action is used by script.js to send
+the form through FormSubmit. FormSubmit may send a one-time activation email the first time
+the endpoint is used. Complete that activation before relying on the form publicly.
 
 GITHUB PAGES
 ------------
 Upload the CONTENTS of this folder to the root of the GitHub Pages repository.
-Do not upload the ZIP itself to the repository.
-
-
-BUILD 3 CHANGES
----------------
-- Updated the Pass It Along supporting text to: “Know a driver who might be looking?”
-- Added “Tiered driver certification program” under “When we talk, ask me about.”
-- Added tablet-specific hero image positioning from 621px through 1100px so the tractor remains visible while the rear of the trailer is cropped.
-- Phone layout at 620px and below remains unchanged.
+Do not upload the ZIP itself.
