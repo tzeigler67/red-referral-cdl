@@ -29,3 +29,9 @@ GITHUB PAGES
 ------------
 Upload the CONTENTS of this folder to the root of the GitHub Pages repository.
 Do not upload the ZIP itself.
+
+
+PRODUCTION BUILD 3.2 CHANGES
+----------------------------
+- Tablet hero image reduced from 118% to 106% width and shifted right so the full tractor remains visible while only the trailer's rear edge is cropped.
+- FormSubmit CAPTCHA re-enabled. Successful validation now continues to FormSubmit's verification step before the email is delivered.

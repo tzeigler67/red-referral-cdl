@@ -11,16 +11,17 @@
 @media(max-width:620px){.refer-card{display:grid;grid-template-columns:auto 1fr}.share-button{grid-column:1/-1;margin-left:0;width:100%;justify-content:center}}
 @media(max-width:430px){.shell{width:min(calc(100% - 24px),var(--shell))}.header-inner{min-height:72px}.brand-mark{width:43px;height:43px}.brand-copy strong{font-size:1.42rem}.brand-copy span{font-size:.67rem}.hero-image{height:285px}.hero-inner{margin-top:-68px}.benefit{padding-inline:10px}.story-card,.form-card{padding:25px 17px}.endorsements{grid-template-columns:1fr}.refer-card{padding:22px 18px}.refer-icon{flex-basis:64px;width:64px;height:64px}.refer-icon svg{width:44px;height:44px}}
 
-/* Build 3.1: tablet hero composition. The image is deliberately oversized and anchored
-   to the left edge so the tractor remains visible while the trailer's rear is cropped. */
+/* Build 3.2: tablet hero composition.
+   Keep the truck nearly at its natural scale, shift it toward the right side of the
+   viewport, and let only the trailer's rear edge crop beyond the right boundary. */
 @media (min-width: 621px) and (max-width: 1100px) {
   .hero { overflow: hidden; }
   .hero-image {
-    width: 118%;
+    width: 106%;
     max-width: none;
-    left: 0;
+    left: 6%;
     right: auto;
-    object-position: left center;
+    object-position: center center;
     transform: none;
   }
 }
