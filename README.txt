@@ -48,12 +48,16 @@ A hard refresh may still be useful once: iPad Safari can be refreshed by closing
 reopening the page, or clearing Website Data for the site in Safari settings.
 
 
-BUILD 3.6 CHANGES
+BUILD 3.6.1 CHANGES
 -----------------
 - Moved the “Bonus $” callout beside Company-funded ESOP, Quarterly Profit-sharing, and Performance-based scorecard.
 - Phone number is now required in both HTML and JavaScript validation.
 - Email remains optional.
 - Updated the instruction above the submission button.
-- Renamed CSS and JavaScript files with Build 3.6 versioning to reduce stale browser caching.
+- Renamed CSS and JavaScript files with Build 3.6.1 versioning to reduce stale browser caching.
 
-Build 3.6 change: on phone layouts, the Bonus $ callout now stays beside the ESOP, quarterly profit-sharing, and performance scorecard rows instead of dropping below the full list.
+Build 3.6.1 change: on phone layouts, the Bonus $ callout now stays beside the ESOP, quarterly profit-sharing, and performance scorecard rows instead of dropping below the full list.
+
+
+Build 3.6.1 refinement:
+- Enlarged and slightly raised the dollar sign in the handwritten “Bonus $” callout.
