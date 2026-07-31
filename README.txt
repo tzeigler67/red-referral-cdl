@@ -35,3 +35,14 @@ PRODUCTION BUILD 3.2 CHANGES
 ----------------------------
 - Tablet hero image reduced from 118% to 106% width and shifted right so the full tractor remains visible while only the trailer's rear edge is cropped.
 - FormSubmit CAPTCHA re-enabled. Successful validation now continues to FormSubmit's verification step before the email is delivered.
+
+BUILD 3.3 HERO FIX
+------------------
+- The stylesheet has been renamed to style-build-3-3.css to bypass stale browser/CDN caches.
+- Phones and portrait tablets now anchor the hero image to the left edge so the tractor's front is not cropped.
+- Landscape tablets (900-1100 px) display the image at a smaller scale and place it to the right of the copy.
+- The tractor remains visible and the rear portion of the trailer is allowed to fall outside the viewport.
+
+After uploading, delete the prior style.css file from the live repository if it remains there.
+A hard refresh may still be useful once: iPad Safari can be refreshed by closing the tab,
+reopening the page, or clearing Website Data for the site in Safari settings.
