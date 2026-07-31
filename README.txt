@@ -46,3 +46,12 @@ BUILD 3.3 HERO FIX
 After uploading, delete the prior style.css file from the live repository if it remains there.
 A hard refresh may still be useful once: iPad Safari can be refreshed by closing the tab,
 reopening the page, or clearing Website Data for the site in Safari settings.
+
+
+BUILD 3.5 CHANGES
+-----------------
+- Moved the “Bonus $” callout beside Company-funded ESOP, Quarterly Profit-sharing, and Performance-based scorecard.
+- Phone number is now required in both HTML and JavaScript validation.
+- Email remains optional.
+- Updated the instruction above the submission button.
+- Renamed CSS and JavaScript files with Build 3.5 versioning to reduce stale browser caching.
