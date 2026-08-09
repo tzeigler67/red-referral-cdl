@@ -67,7 +67,7 @@ BUILD 3.6.3
 -----------
 Desktop-only hero correction: on screens 1101px and wider, the hero image is constrained to the right 58% of the hero so the tractor is no longer positioned beneath the left-side messaging. Mobile and tablet hero rules are unchanged.
 
-PRODUCTION BUILD 3.7.0 HERO UPDATE
+PRODUCTION BUILD 3.7.1 HERO UPDATE
 ----------------------------------
 Based on Build 3.6.4 with the following approved hero changes:
 - Replaced hero truck asset with the newly approved warehouse-background truck image with fender number removed.
