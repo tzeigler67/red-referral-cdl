@@ -61,3 +61,8 @@ Build 3.6.1 change: on phone layouts, the Bonus $ callout now stays beside the E
 
 Build 3.6.1 refinement:
 - Enlarged and slightly raised the dollar sign in the handwritten “Bonus $” callout.
+
+
+BUILD 3.6.3
+-----------
+Desktop-only hero correction: on screens 1101px and wider, the hero image is constrained to the right 58% of the hero so the tractor is no longer positioned beneath the left-side messaging. Mobile and tablet hero rules are unchanged.
