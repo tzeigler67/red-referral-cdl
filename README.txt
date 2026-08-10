@@ -79,3 +79,26 @@ Based on Build 3.6.4 with the following approved hero changes:
 - Mobile and tablet portrait keep image-first/content-below composition.
 - Tablet landscape retains split text/image composition.
 All other Build 3.6.4 sections, content, form handling, CAPTCHA, and styling remain unchanged.
+
+PRODUCTION BUILD 3.8.1 — TECHNICAL SEO PASS
+--------------------------------------------
+Baseline: Production Build 3.8.0.
+
+Visible page content, layout, imagery, form fields, and styling are unchanged.
+
+Behind-the-scenes SEO changes:
+- Reworked the HTML title and meta description for CDL-A career-search relevance.
+- Added explicit robots indexing/snippet directives.
+- Added the canonical URL for https://redreferralcdl.com/.
+- Expanded Open Graph metadata, including canonical URL, locale, site name, and hero image dimensions/alt text.
+- Added X/Twitter large-image card metadata.
+- Added standards-based WebSite and WebPage JSON-LD structured data using only information reflected by the visible page.
+- Added a preload hint for the above-the-fold hero truck image.
+- Added robots.txt with sitemap discovery.
+- Added sitemap.xml for the site's canonical root URL.
+- Renamed CSS/JavaScript files to Build 3.8.1 names and updated cache-busting query strings.
+
+DEPLOYMENT
+----------
+Upload the CONTENTS of this folder to the root of the GitHub Pages repository, replacing the prior build files.
+The new robots.txt and sitemap.xml must also be uploaded at the repository/site root.
