@@ -67,7 +67,7 @@ BUILD 3.6.3
 -----------
 Desktop-only hero correction: on screens 1101px and wider, the hero image is constrained to the right 58% of the hero so the tractor is no longer positioned beneath the left-side messaging. Mobile and tablet hero rules are unchanged.
 
-PRODUCTION BUILD 3.8.0 HERO UPDATE
+PRODUCTION BUILD 3.9.0 HERO UPDATE
 ----------------------------------
 Based on Build 3.6.4 with the following approved hero changes:
 - Replaced hero truck asset with the newly approved warehouse-background truck image with fender number removed.
@@ -80,25 +80,17 @@ Based on Build 3.6.4 with the following approved hero changes:
 - Tablet landscape retains split text/image composition.
 All other Build 3.6.4 sections, content, form handling, CAPTCHA, and styling remain unchanged.
 
-PRODUCTION BUILD 3.8.1 — TECHNICAL SEO PASS
---------------------------------------------
-Baseline: Production Build 3.8.0.
 
-Visible page content, layout, imagery, form fields, and styling are unchanged.
+BUILD 3.9.0 ADDITIONS
+---------------------
+Obfuscated prize page: JPFb6AGDQxWrkcw8RQ6Dm0F3lpz1.html
+Main form confirmation: main-confirmation.html
+Prize claim confirmation: prize-confirmation.html
 
-Behind-the-scenes SEO changes:
-- Reworked the HTML title and meta description for CDL-A career-search relevance.
-- Added explicit robots indexing/snippet directives.
-- Added the canonical URL for https://redreferralcdl.com/.
-- Expanded Open Graph metadata, including canonical URL, locale, site name, and hero image dimensions/alt text.
-- Added X/Twitter large-image card metadata.
-- Added standards-based WebSite and WebPage JSON-LD structured data using only information reflected by the visible page.
-- Added a preload hint for the above-the-fold hero truck image.
-- Added robots.txt with sitemap discovery.
-- Added sitemap.xml for the site's canonical root URL.
-- Renamed CSS/JavaScript files to Build 3.8.1 names and updated cache-busting query strings.
+IMPORTANT BEFORE DEPLOYMENT
+---------------------------
+Deployment root URL configured as:
+https://redreferralcdl.com/
 
-DEPLOYMENT
-----------
-Upload the CONTENTS of this folder to the root of the GitHub Pages repository, replacing the prior build files.
-The new robots.txt and sitemap.xml must also be uploaded at the repository/site root.
+Per instruction, the Main Form does NOT include the future conditional _cc address yet.
+Prize claims submit to redreferral1952@gmail.com.

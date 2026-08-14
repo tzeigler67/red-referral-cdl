@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Spin to Reveal Your Prize</title>
+<style>
+:root{--red:#d0041b;--black:#111;--white:#fff;--panel:#181818;--muted:#bbb}
+*{box-sizing:border-box}body{margin:0;background:var(--black);color:#fff;font-family:Arial,sans-serif}
+.wrap{width:min(94%,900px);margin:auto;padding:32px 0 48px}
+.panel{background:var(--panel);border:1px solid #2c2c2c;border-radius:18px;padding:24px}
+h1{margin-top:0;font-size:clamp(2rem,6vw,3.2rem)}p{line-height:1.6}
+.name-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}
+label{display:block;margin-bottom:6px;font-weight:800}
+input[type=text]{width:100%;padding:12px 14px;border:1px solid #666;border-radius:8px;font-size:1rem}
+.wheel-wrap{display:grid;place-items:center;position:relative;margin:28px 0}
+.pointer{position:absolute;top:-4px;z-index:3;width:0;height:0;border-left:18px solid transparent;border-right:18px solid transparent;border-top:34px solid #fff;filter:drop-shadow(0 2px 2px rgba(0,0,0,.5))}
+canvas{width:min(88vw,520px);height:min(88vw,520px);max-width:520px;max-height:520px;border-radius:50%;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+button{border:0;border-radius:8px;background:var(--red);color:#fff;padding:14px 22px;font-size:1rem;font-weight:800;cursor:pointer}
+button:disabled{opacity:.5;cursor:not-allowed}
+.result{min-height:1.6em;margin-top:20px;text-align:center;font-size:1.2rem;font-weight:800}
+.claim-form{display:none;margin-top:22px}.claim-form.visible{display:block}
+.small{color:var(--muted);font-size:.9rem}
+@media(max-width:600px){.name-grid{grid-template-columns:1fr}.panel{padding:18px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<section class="panel">
+<h1>Spin to Reveal Your Prize</h1>
+<p>Thanks for providing your contact info — depending on the choice you made, either myself or a Driver Hiring Manager will contact you very soon.</p>
+<p>Now for some fun. Below is a prize wheel. Whatever prize is revealed will be sent to you after you’ve been hired and have successfully completed orientation.</p>
+<p>When ready, click the Reveal My Prize button below, and Good Luck!</p>
+
+<div class="name-grid">
+<div><label for="firstName">First Name</label><input id="firstName" type="text" autocomplete="given-name"></div>
+<div><label for="lastName">Last Name</label><input id="lastName" type="text" autocomplete="family-name"></div>
+</div>
+
+<div class="wheel-wrap">
+<div class="pointer" aria-hidden="true"></div>
+<canvas id="wheel" width="520" height="520" aria-label="Prize wheel"></canvas>
+</div>
+
+<div class="buttons"><button id="spinBtn" type="button">Reveal My Prize</button></div>
+<div id="result" class="result" aria-live="polite"></div>
+
+<form id="claimForm" class="claim-form" action="https://formsubmit.co/redreferral1952@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Prize Wheel Claim">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="_next" value="https://redreferralcdl.com/prize-confirmation.html">
+<input type="hidden" id="claimFirst" name="First Name">
+<input type="hidden" id="claimLast" name="Last Name">
+<input type="hidden" id="claimPrize" name="Winning Prize">
+<div class="buttons"><button type="submit">Claim Prize</button></div>
+</form>
+
+<p class="small">Prize eligibility is subject to successful hire and completion of orientation.</p>
+</section>
+</main>
+
+<script>
+(() => {
+const prizes=["$50 Cash","$100 Cash","Dude Wipes","$150 Cash","$200 Cash","Beef Jerky"];
+const colors=["#d0041b","#111111","#d0041b","#111111","#d0041b","#111111"];
+const winningPrize="$200 Cash";
+const canvas=document.getElementById("wheel"),ctx=canvas.getContext("2d");
+const spinBtn=document.getElementById("spinBtn"),result=document.getElementById("result");
+const claimForm=document.getElementById("claimForm"),firstName=document.getElementById("firstName"),lastName=document.getElementById("lastName");
+const claimFirst=document.getElementById("claimFirst"),claimLast=document.getElementById("claimLast"),claimPrize=document.getElementById("claimPrize");
+const slice=Math.PI*2/prizes.length;
+let rotation=0,spinning=false;
+
+function drawWheel(rot=0){
+ const cx=260,cy=260,r=252;ctx.clearRect(0,0,520,520);
+ prizes.forEach((p,i)=>{
+  const start=rot+i*slice-Math.PI/2,end=start+slice;
+  ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,r,start,end);ctx.closePath();
+  ctx.fillStyle=colors[i];ctx.fill();ctx.strokeStyle="#fff";ctx.lineWidth=2;ctx.stroke();
+  ctx.save();ctx.translate(cx,cy);ctx.rotate(start+slice/2);ctx.textAlign="right";ctx.fillStyle="#fff";ctx.font="bold 24px Arial";ctx.fillText(p,r-26,8);ctx.restore();
+ });
+ ctx.beginPath();ctx.arc(cx,cy,44,0,Math.PI*2);ctx.fillStyle="#fff";ctx.fill();ctx.strokeStyle="#111";ctx.lineWidth=4;ctx.stroke();
+}
+function validNames(){
+ if(!firstName.value.trim()||!lastName.value.trim()){alert("Please enter your first and last name before revealing your prize.");return false}
+ return true;
+}
+function norm(a){const f=Math.PI*2;return ((a%f)+f)%f}
+spinBtn.addEventListener("click",()=>{
+ if(spinning||!validNames())return;
+ if(localStorage.getItem("redReferralPrizeClaimed")==="1"){result.textContent="This browser has already completed the prize process.";spinBtn.disabled=true;return}
+ spinning=true;spinBtn.disabled=true;result.textContent="";claimForm.classList.remove("visible");
+ const winIndex=prizes.indexOf(winningPrize);
+ const desired=-(winIndex*slice+slice/2);
+ const extraTurns=6+Math.floor(Math.random()*5);
+ const jitter=(Math.random()-.5)*(slice*.18);
+ const target=rotation+extraTurns*Math.PI*2+(desired-norm(rotation))+jitter;
+ const startRot=rotation,start=performance.now(),duration=4200+Math.random()*1300;
+ function frame(now){
+  const t=Math.min(1,(now-start)/duration),eased=1-Math.pow(1-t,4);
+  rotation=startRot+(target-startRot)*eased;drawWheel(rotation);
+  if(t<1)requestAnimationFrame(frame);else{
+   spinning=false;rotation=target;result.textContent="Your prize: "+winningPrize;
+   claimFirst.value=firstName.value.trim();claimLast.value=lastName.value.trim();claimPrize.value=winningPrize;
+   claimForm.classList.add("visible");
+  }
+ }
+ requestAnimationFrame(frame);
+});
+claimForm.addEventListener("submit",()=>localStorage.setItem("redReferralPrizeClaimed","1"));
+drawWheel();
+})();
+</script>
+</body>
+</html>
