@@ -67,7 +67,7 @@ BUILD 3.6.3
 -----------
 Desktop-only hero correction: on screens 1101px and wider, the hero image is constrained to the right 58% of the hero so the tractor is no longer positioned beneath the left-side messaging. Mobile and tablet hero rules are unchanged.
 
-PRODUCTION BUILD 3.9.0 HERO UPDATE
+PRODUCTION BUILD 3.10.0 HERO UPDATE
 ----------------------------------
 Based on Build 3.6.4 with the following approved hero changes:
 - Replaced hero truck asset with the newly approved warehouse-background truck image with fender number removed.
@@ -81,7 +81,7 @@ Based on Build 3.6.4 with the following approved hero changes:
 All other Build 3.6.4 sections, content, form handling, CAPTCHA, and styling remain unchanged.
 
 
-BUILD 3.9.0 ADDITIONS
+BUILD 3.10.0 ADDITIONS
 ---------------------
 Obfuscated prize page: JPFb6AGDQxWrkcw8RQ6Dm0F3lpz1.html
 Main form confirmation: main-confirmation.html
@@ -94,3 +94,11 @@ https://redreferralcdl.com/
 
 Per instruction, the Main Form does NOT include the future conditional _cc address yet.
 Prize claims submit to redreferral1952@gmail.com.
+
+
+BUILD 3.10.0 CONTENT UPDATE
+---------------------------
+This release uses deployed Build 3.9.0 as its baseline.
+Prize wheel page, prize submission flow, confirmation pages, redirect URLs,
+form recipients, CAPTCHA behavior, images, and prize-wheel filename are unchanged.
+Main-form routing values are preserved; only the visible option labels were updated.
